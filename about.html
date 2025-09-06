@@ -7,44 +7,69 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>About Me</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="container header-content">
+      <h1>About Me</h1>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <nav id="navbar" class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Hello! I'm Srinidhi 👩‍💻</h2>
-      <img src="profile.jpg" alt="Srinidhi's Photo" />
+  <!-- ===== MAIN ===== -->
+  <main class="container about-section">
+    <section class="about-content">
+      <div class="about-text">
+        <h2>Hello! I'm Srinidhi 👩‍💻</h2>
+        <p>
+          I am a B.Com Computer Application graduate and an aspiring Front-End Developer 
+          with a strong interest in crafting clean, responsive, and user-friendly web applications. 
+          I enjoy working with modern web technologies like HTML, CSS, and JavaScript to bring ideas 
+          to life. Currently, I am expanding my portfolio and exploring new tools to kickstart 
+          my career in the IT field.
+        </p>
+        <p>
+          Over time, I have developed a strong interest in creating digital experiences that are not only functional but also visually engaging. I enjoy experimenting with layouts, colors, and interactive elements to make websites stand out while remaining user-friendly. My academic background in Computer Applications has given me a foundation in programming and problem-solving, which I now combine with my growing expertise in front-end development.</p>
+        <h3>🔧 Skills</h3>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Python (basic), SQLite</li>
+          <li>MediaPipe (Virtual Trial Room project)</li>
+          <li>Git & GitHub</li>
+        </ul>
 
-      <p>
-        I'm a B.Com Computer Application graduate and an aspiring front-end developer.
-        I enjoy creating responsive and interactive websites using technologies like HTML, CSS, and JavaScript.
-        I'm currently building my portfolio and learning new tools to start my career in the IT field.
-      </p>
+        <h3>🎯 Interests</h3>
+        <p>
+          I am passionate about combining creativity and technology to build intuitive digital 
+          experiences. My main focus is front-end development, but I am always eager to learn 
+          and explore beyond to grow as a developer.
+        </p>
+        <p>
+         Outside of coding, I love exploring design trends and staying updated with new tools that make development faster and more efficient. I am particularly interested in how front-end development blends with user experience (UX) and accessibility, as I believe great websites should be inclusive for everyone. Looking ahead, I aspire to grow into a versatile developer who can work across both front-end and back-end technologies, contributing to impactful projects in the tech industry.</p>
+      </div>
 
-      <h3>🔧 Skills:</h3>
-      <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>Python (basic), SQLite</li>
-        <li>MediaPipe (used in Virtual Trial Room project)</li>
-        <li>Git & GitHub</li>
-      </ul>
-
-      <h3>🎯 Interests:</h3>
-      <p>
-        I'm passionate about combining creativity and technology. I have interest in front-end developing.
-      </p>
+      <div class="about-image">
+        <img src="images/profile.jpg" alt="Srinidhi's Photo" class="profile-pic" />
+      </div>
     </section>
   </main>
 
-  <footer>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
     <p>© 2025 Srinidhi Ramprakash</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const navbar = document.getElementById("navbar");
+      navbar.classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
+
