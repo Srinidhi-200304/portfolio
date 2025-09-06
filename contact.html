@@ -7,34 +7,59 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Contact Me</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="container header-content">
+      <h1>Contact Me</h1>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <nav id="navbar" class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
+
   <main>
-    <section>
+    <section class="contact">
       <h2>Let's Connect! 🤝</h2>
-      <p>Feel free to reach out to me for job opportunities, collaborations, or questions.</p>
+      <p>
+        I’d love to hear from you! Whether it’s about job opportunities, collaborations, or just a friendly hello,
+        feel free to reach out through any of the platforms below.
+      </p>
 
-      <ul>
-        <li><strong>Email:</strong> <a href="mailto:srinidhiramprakash@gmail.com">srinidhiramprakash@gmail.com</a></li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/Srinidhi-200304" target="_blank">github.com/yourgithub</a></li>
-        <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/srinidhir2004" target="_blank">linkedin.com/in/srinidhir2004</a></li>
-        <li><strong>WhatsApp:</strong> <a href="https://wa.me/917904093929" target="_blank">Click to Chat</a></li>
-      </ul>
+      <div class="contact-card">
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:srinidhiramprakash@gmail.com">Send me a mail</a></li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/Srinidhi-200304" target="_blank">Check out my profile</a></li>
+          <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/srinidhir2004" target="_blank">LinkedIn Profile</a></li>
+          <li><strong>WhatsApp:</strong> <a href="https://wa.me/917904093929" target="_blank">Click to Chat</a></li>
+        </ul>
+      </div>
 
-     
+      <h3>💬 Send Me a Message</h3>
+      <form class="contact-form" action="https://formsubmit.co/srinidhiramprakash@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </section>
   </main>
 
-  <footer>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
     <p>© 2025 Srinidhi Ramprakash</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const navbar = document.getElementById("navbar");
+      navbar.classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
