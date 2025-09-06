@@ -7,56 +7,65 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>My Projects</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="container header-content">
+      <h1>My Projects</h1>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <nav id="navbar" class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
+
   <main>
-    <section>
-      <h2>💡 Virtual Trial Room</h2>
-      <p>
-        A web-based virtual clothing try-on application where users can preview sarees before purchasing. <br>
-        <strong>Technologies:</strong> HTML, CSS, JavaScript, Python (Flask), SQLite, MediaPipe <br>
-        <strong>Status:</strong> Completed <br>
-        <a href="https://github.com/Srinidhi-200304/virtual-trail-room" target="_blank">
-           View Project Images
-        </a>
-      </p>
+    <section class="projects">
+      <div class="project-card">
+        <h2>💡 Virtual Trial Room</h2>
+        <p>
+          A web-based virtual clothing try-on application where users can preview sarees before purchasing.
+        </p>
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Python (Flask), SQLite, MediaPipe</p>
+        <p><strong>Status:</strong> Completed</p>
+        <a href="https://github.com/Srinidhi-200304/virtual-trail-room" target="_blank" class="btn">🔗 View Project</a>
+      </div>
+
+      <div class="project-card">
+        <h2>🛍️ Online Saree Store</h2>
+        <p>
+          An elegant e-commerce website for displaying saree collections with a simple, user-friendly interface.
+        </p>
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+        <p><strong>Status:</strong> Completed</p>
+        <a href="https://github.com/Srinidhi-200304/saree-store-website" target="_blank" class="btn">🔗 View Project</a>
+      </div>
+
+      <div class="project-card">
+        <h2>👟 Online Shoe Store</h2>
+        <p>
+          A modern e-commerce landing page for a shoe store with responsive design and interactive features.
+        </p>
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+        <p><strong>Status:</strong> Completed</p>
+        <a href="https://github.com/Srinidhi-200304/shoe-store-website" target="_blank" class="btn">🔗 View Project</a>
+      </div>
     </section>
+  </main>
 
-    <section>
-      <h2>🛍️ Online Saree Store Web</h2>
-      <p> An E-commerce saree website
-<br>
-       <strong>Technologies:</strong> HTML, CSS, JavaScript. <br>
-       <strong>Status:</strong> Completed <br>
-       <a href="https://github.com/Srinidhi-200304/saree-store-website" target="_blank">
-           View Project Images
-       </a>
+ <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>© 2025 Srinidhi Ramprakash</p>
+  </footer>
 
-        
-      </p>
-    </section>
-
-    <section>
-      <h2>🛍️ Online Shoe Store Web</h2>
-      <p> An E-commerce shoe store website
-<br>
-       <strong>Technologies:</strong> HTML, CSS, JavaScript.  <br>
-       <strong>Status:</strong> Completed <br>
-       <a href="https://github.com/Srinidhi-200304/shoe-store-website" target="_blank">
-           View Project Images
-       </a>
-
-        
-      </p>
-    </section>
-
-
-
+  <script>
+    function toggleMenu() {
+      const navbar = document.getElementById("navbar");
+      navbar.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
